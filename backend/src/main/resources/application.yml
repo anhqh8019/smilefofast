@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: smile-fo-fast
+
+smile-fo:
+  datasource:
+    jdbc-url: ${SMILE_FO_DB_URL:jdbc:sqlserver://172.16.40.230:1433;databaseName=SMILE_FO;encrypt=true;trustServerCertificate=true}
+    username: ${SMILE_FO_DB_USER}
+    password: ${SMILE_FO_DB_PASSWORD}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+integration:
+  datasource:
+    jdbc-url: ${INTEGRATION_DB_URL:jdbc:sqlserver://172.16.40.230:1433;databaseName=SMILE_FAST_INT;encrypt=true;trustServerCertificate=true}
+    username: ${INTEGRATION_DB_USER}
+    password: ${INTEGRATION_DB_PASSWORD}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
